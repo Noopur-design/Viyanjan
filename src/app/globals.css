@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --velvet: #1d1109;
+  --velvet-glow: #4a2c18;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  /* warm velvet vignette behind the (transparent) 3D canvas */
+  background:
+    radial-gradient(120% 90% at 50% 78%, #6b4427 0%, #432715 38%, #241409 72%, #160d07 100%);
+  color: #f6efe1;
+  font-family: "Jost", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.font-display {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+/* thin tracked label style used throughout the editorial overlay */
+.eyebrow {
+  font-family: "Jost", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.32em;
+  font-weight: 400;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 1.1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.delay-1 { animation-delay: 0.15s; }
+.delay-2 { animation-delay: 0.3s; }
+.delay-3 { animation-delay: 0.45s; }

@@ -1,0 +1,107 @@
+[
+  {
+    "id": "52961",
+    "name": "Budino Di Ricotta",
+    "area": "Italian",
+    "thumb": "https://www.themealdb.com/images/media/meals/1549542877.jpg",
+    "image": "/images/dishes/52961.jpg"
+  },
+  {
+    "id": "52796",
+    "name": "Chicken Alfredo Primavera",
+    "area": "Italian",
+    "thumb": "https://www.themealdb.com/images/media/meals/syqypv1486981727.jpg",
+    "image": "/images/dishes/52796.jpg"
+  },
+  {
+    "id": "52839",
+    "name": "Chilli prawn linguine",
+    "area": "Italian",
+    "thumb": "https://www.themealdb.com/images/media/meals/usywpp1511189717.jpg",
+    "image": "/images/dishes/52839.jpg"
+  },
+  {
+    "id": "52885",
+    "name": " Bubble & Squeak",
+    "area": "British",
+    "thumb": "https://www.themealdb.com/images/media/meals/xusqvw1511638311.jpg",
+    "image": "/images/dishes/52885.jpg"
+  },
+  {
+    "id": "52893",
+    "name": "Apple & Blackberry Crumble",
+    "area": "British",
+    "thumb": "https://www.themealdb.com/images/media/meals/xvsurr1511719182.jpg",
+    "image": "/images/dishes/52893.jpg"
+  },
+  {
+    "id": "52826",
+    "name": "Braised Beef Chilli",
+    "area": "Mexican",
+    "thumb": "https://www.themealdb.com/images/media/meals/uuqvwu1504629254.jpg",
+    "image": "/images/dishes/52826.jpg"
+  },
+  {
+    "id": "52819",
+    "name": "Cajun spiced fish tacos",
+    "area": "Mexican",
+    "thumb": "https://www.themealdb.com/images/media/meals/uvuyxu1503067369.jpg",
+    "image": "/images/dishes/52819.jpg"
+  },
+  {
+    "id": "52831",
+    "name": "Chicken Karaage",
+    "area": "Japanese",
+    "thumb": "https://www.themealdb.com/images/media/meals/tyywsw1505930373.jpg",
+    "image": "/images/dishes/52831.jpg"
+  },
+  {
+    "id": "52773",
+    "name": "Honey Teriyaki Salmon",
+    "area": "Japanese",
+    "thumb": "https://www.themealdb.com/images/media/meals/xxyupu1468262513.jpg",
+    "image": "/images/dishes/52773.jpg"
+  },
+  {
+    "id": "53373",
+    "name": "Air Fryer Egg Rolls",
+    "area": "Chinese",
+    "thumb": "https://www.themealdb.com/images/media/meals/grhn401765687086.jpg",
+    "image": "/images/dishes/53373.jpg"
+  },
+  {
+    "id": "53366",
+    "name": "Beef and Broccoli Stir-Fry",
+    "area": "Chinese",
+    "thumb": "https://www.themealdb.com/images/media/meals/m0p0j81765568742.jpg",
+    "image": "/images/dishes/53366.jpg"
+  },
+  {
+    "id": "53011",
+    "name": "Chicken Quinoa Greek Salad",
+    "area": "Greek",
+    "thumb": "https://www.themealdb.com/images/media/meals/k29viq1585565980.jpg",
+    "image": "/images/dishes/53011.jpg"
+  },
+  {
+    "id": "52764",
+    "name": "Garides Saganaki",
+    "area": "Greek",
+    "thumb": "https://www.themealdb.com/images/media/meals/wuvryu1468232995.jpg",
+    "image": "/images/dishes/52764.jpg"
+  },
+  {
+    "id": "53158",
+    "name": "Air fryer patatas bravas",
+    "area": "Spanish",
+    "thumb": "https://www.themealdb.com/images/media/meals/3m8yae1763257951.jpg",
+    "image": "/images/dishes/53158.jpg"
+  },
+  {
+    "id": "53169",
+    "name": "Ajo blanco",
+    "area": "Spanish",
+    "thumb": "https://www.themealdb.com/images/media/meals/5jdtie1763289302.jpg",
+    "image": "/images/dishes/53169.jpg"
+  }
+]

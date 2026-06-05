@@ -1,0 +1,84 @@
+// Viyanjan — restaurant database schema (PostgreSQL).
+// Local dev + production both use Postgres now. DATABASE_URL is set in .env.
+//   migrate:  npx prisma migrate dev --name init
+//   seed:     npm run db:seed
+// status / paymentMethod / paymentStatus are kept as String for flexibility;
+// allowed values are documented in comments below and enforced by the Zod
+// validators in src/lib/validators.ts.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Category {
+  id        String     @id @default(cuid())
+  name      String     @unique
+  slug      String     @unique
+  order     Int        @default(0)
+  items     MenuItem[]
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+}
+
+model MenuItem {
+  id          String      @id @default(cuid())
+  name        String
+  description String      @default("")
+  price       Int // stored in minor units (paise/cents) to avoid float errors
+  imageUrl    String      @default("")
+  modelUrl    String      @default("") // path to a .glb food model for the 3D scene
+  // visual hint for procedural plate rendering until a real model is supplied
+  foodColor   String      @default("#caa15a")
+  isFeatured  Boolean     @default(false) // shows on the rotating home table
+  isAvailable Boolean     @default(true)
+  spiceLevel  Int         @default(0) // 0-3
+  category    Category    @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  categoryId  String
+  orderItems  OrderItem[]
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  @@index([categoryId])
+  @@index([isFeatured])
+}
+
+// Order status values (SQLite has no enum type):
+// PENDING | CONFIRMED | PREPARING | READY | COMPLETED | CANCELLED
+model Order {
+  id           String      @id @default(cuid())
+  customerName String
+  phone        String
+  email        String      @default("")
+  tableNumber  String      @default("")
+  guests       Int         @default(2) // party size — table for how many
+  notes        String      @default("")
+  status       String      @default("PENDING")
+  // Payment: method = COD | CARD ; paymentStatus = UNPAID | PAID
+  paymentMethod String     @default("COD")
+  paymentStatus String     @default("UNPAID")
+  reservationDate DateTime? // optional date/time for the booking
+  totalAmount  Int // minor units, computed server-side
+  items        OrderItem[]
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+
+  @@index([status])
+}
+
+model OrderItem {
+  id           String   @id @default(cuid())
+  order        Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  orderId      String
+  menuItem     MenuItem @relation(fields: [menuItemId], references: [id])
+  menuItemId   String
+  quantity     Int      @default(1)
+  unitPrice    Int // snapshot of price at order time (minor units)
+  nameSnapshot String // snapshot in case the menu item is later renamed
+
+  @@index([orderId])
+}

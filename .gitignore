@@ -1,0 +1,17 @@
+node_modules
+.next
+out
+.env
+.env*.local
+*.log
+.DS_Store
+/coverage
+next-env.d.ts
+tsconfig.tsbuildinfo
+
+# user-uploaded files (re-upload after deploy)
+public/uploads/
+public/qr/
+
+# videos (large — add to git LFS or re-copy after deploy)
+public/videos/

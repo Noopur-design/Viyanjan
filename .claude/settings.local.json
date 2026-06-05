@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm -v)",
+      "Bash(npm install *)",
+      "Bash(mkdir -p public/models)",
+      "Bash(npx prisma *)",
+      "Bash(npx next *)",
+      "PowerShell(Get-PSDrive C | Select-Object @{n='FreeGB';e={[math]::Round\\($_.Free/1GB,1\\)}}, @{n='UsedGB';e={[math]::Round\\($_.Used/1GB,1\\)}})"
+    ]
+  }
+}
