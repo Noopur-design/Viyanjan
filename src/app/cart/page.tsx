@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { useCart } from "@/store/cart";
@@ -15,6 +15,14 @@ import type { Order } from "@/types";
 type Pay = "COD" | "CARD";
 
 export default function CartPage() {
+  return (
+    <Suspense fallback={<div className="flex min-h-screen items-center justify-center text-cream/50">Loading…</div>}>
+      <CartPageInner />
+    </Suspense>
+  );
+}
+
+function CartPageInner() {
   const searchParams = useSearchParams();
   const tableNumber = searchParams.get("table") ?? "";
   const { lines, setQty, remove, clear, total } = useCart();
