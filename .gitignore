@@ -13,5 +13,4 @@ tsconfig.tsbuildinfo
 public/uploads/
 public/qr/
 
-# videos (large — add to git LFS or re-copy after deploy)
-public/videos/
+# videos committed directly (small enough for Vercel free tier)
