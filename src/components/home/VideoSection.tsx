@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 
 const CLIPS = [
   {
-    src: "/videos/kitchen.mp4",
+    src: "/videos/plating.mp4",
     title: "In the kitchen",
     caption: "Where every service begins",
     big: true,
@@ -16,7 +16,7 @@ const CLIPS = [
     big: false,
   },
   {
-    src: "/videos/plating.mp4",
+    src: "/videos/kitchen.mp4",
     title: "Fire & flavour",
     caption: "Heat, timed to the second",
     big: false,
