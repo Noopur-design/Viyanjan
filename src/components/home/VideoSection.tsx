@@ -4,19 +4,19 @@ import Reveal from "./Reveal";
 
 const CLIPS = [
   {
-    src: "/videos/story.mp4",
+    src: "/videos/kitchen.mp4",
     title: "In the kitchen",
     caption: "Where every service begins",
     big: true,
   },
   {
-    src: "/videos/plating.mp4",
+    src: "/videos/story.mp4",
     title: "The art of plating",
     caption: "Precision, repeated nightly",
     big: false,
   },
   {
-    src: "/videos/kitchen.mp4",
+    src: "/videos/plating.mp4",
     title: "Fire & flavour",
     caption: "Heat, timed to the second",
     big: false,
