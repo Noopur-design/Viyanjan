@@ -9,6 +9,9 @@ out
 next-env.d.ts
 tsconfig.tsbuildinfo
 
+# local SQLite file (not used by the deployed app)
+prisma/dev.db
+
 # user-uploaded files (re-upload after deploy)
 public/uploads/
 public/qr/

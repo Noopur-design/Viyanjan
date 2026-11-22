@@ -1,18 +1,17 @@
-// Viyanjan — restaurant database schema.
-// Local dev uses SQLite (zero-config, file in prisma/dev.db).
-// For production, switch provider to mysql/postgresql and point DATABASE_URL
-// at the hosted DB. status / paymentMethod / paymentStatus are kept as String
-// for flexibility; allowed values are enforced by the Zod validators in
-// src/lib/validators.ts.
-//   push:  npm run db:push
-//   seed:  npm run db:seed
+// Viyanjan — restaurant database schema (MySQL).
+// Home page renders static featured dishes from src/lib/featuredDishes.ts,
+// so the DB is only needed for /menu, /admin, and order placement.
+// status / paymentMethod / paymentStatus are kept as String for flexibility;
+// allowed values are enforced by the Zod validators in src/lib/validators.ts.
+//   migrate:  npx prisma migrate dev --name init
+//   seed:     npm run db:seed
 
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
